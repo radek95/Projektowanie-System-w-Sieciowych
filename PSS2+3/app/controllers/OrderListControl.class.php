@@ -80,6 +80,12 @@ class OrderListControl {
 		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
 		$pagerfanta->setCurrentPage($currentPage);
 		$pagerfanta->setMaxPerPage(10);
+
+		// 6. Wygeneruj widok
+		//getSmarty()->assign('pagination', $pagination);
+		getSmarty()->assign('orderSearchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
+		getSmarty()->assign('orders',$this->records);  // lista rekordów z bazy danych
+		getSmarty()->display('OrderList.tpl');
 	}
 	
 }

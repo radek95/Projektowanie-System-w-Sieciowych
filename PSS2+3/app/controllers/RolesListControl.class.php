@@ -79,6 +79,12 @@ class RolesListControl {
 		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
 		$pagerfanta->setCurrentPage($currentPage);
 		$pagerfanta->setMaxPerPage(10);
+
+		// 5. Wygeneruj widok
+		//getSmarty()->assign('pagination', $pagination);
+		getSmarty()->assign('rolesSearchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
+		getSmarty()->assign('roles',$this->records);  // lista rekordów z bazy danych
+		getSmarty()->display('RolesList.tpl');
 	}
 	
 }

@@ -24,6 +24,10 @@
     <?php echo $paginator; ?>
 </div>
 
+<div style='padding: 10px 20px 0px; border-top: dotted 1px #CCC;'>
+<strong>Page <?php echo $page_no." of ".$total_no_of_pages; ?></strong>
+</div>
+
 <table id="tab_people" class="pure-table pure-table-bordered">
 <thead>
 	<tr>

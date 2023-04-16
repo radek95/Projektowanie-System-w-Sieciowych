@@ -83,6 +83,24 @@ class DietListControl {
 		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
 		$pagerfanta->setCurrentPage($currentPage);
 		$pagerfanta->setMaxPerPage(10);
+
+		// 5. Stworzenie przyciskow do paginacji
+		$pagination = '';
+		if ($total_pages > 1) {
+			for ($i = 1; $i <= $total_pages; $i++) {
+				if ($i == $current_page) {
+					$pagination .= '<span class="active">' . $i . '</span>';
+				} else {
+					$pagination .= '<a href="?page=' . $i . '">' . $i . '</a>';
+				}
+			}
+		}
+
+		// 6. Wygeneruj widok
+		getSmarty()->assign('pagination', $pagination);
+		getSmarty()->assign('dietSearchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
+		getSmarty()->assign('diets',$this->records);  // lista rekordów z bazy danych
+		getSmarty()->display('DietList.tpl');
 	}
 	
 }
