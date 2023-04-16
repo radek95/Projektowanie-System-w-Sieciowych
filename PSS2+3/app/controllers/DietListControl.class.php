@@ -86,9 +86,9 @@ class DietListControl {
 
 		// 5. Stworzenie przyciskow do paginacji
 		$pagination = '';
-		if ($total_pages > 1) {
-			for ($i = 1; $i <= $total_pages; $i++) {
-				if ($i == $current_page) {
+		if ($totalPages > 1) {
+			for ($i = 1; $i <= $totalPages; $i++) {
+				if ($i == $currentPage) {
 					$pagination .= '<span class="active">' . $i . '</span>';
 				} else {
 					$pagination .= '<a href="?page=' . $i . '">' . $i . '</a>';

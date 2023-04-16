@@ -81,8 +81,20 @@ class OrderListControl {
 		$pagerfanta->setCurrentPage($currentPage);
 		$pagerfanta->setMaxPerPage(10);
 
+		// 5. Stworzenie przyciskow do paginacji
+		$pagination = '';
+		if ($totalPages > 1) {
+			for ($i = 1; $i <= $totalPages; $i++) {
+				if ($i == $currentPage) {
+					$pagination .= '<span class="active">' . $i . '</span>';
+				} else {
+					$pagination .= '<a href="?page=' . $i . '">' . $i . '</a>';
+				}
+			}
+		}
+
 		// 6. Wygeneruj widok
-		//getSmarty()->assign('pagination', $pagination);
+		getSmarty()->assign('pagination', $pagination);
 		getSmarty()->assign('orderSearchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
 		getSmarty()->assign('orders',$this->records);  // lista rekordów z bazy danych
 		getSmarty()->display('OrderList.tpl');
