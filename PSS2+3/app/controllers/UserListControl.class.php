@@ -3,10 +3,11 @@
 namespace app\controllers;
 use app\forms\UserSearchForm;
 use PDOException;
-use JasonGrimes\Paginator;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
+
 
 class ListCtrl {
-
 	private $form; //dane formularza wyszukiwania
 	private $records; //rekordy pobrane z bazy danych
 
@@ -59,7 +60,7 @@ class ListCtrl {
 		$paginator->setMaxPagesToShow(10);
 		
 		try{
-			$this->records = getDB()->select("users", [
+			$allRecords = getDB()->select("users", [
 					"userID",
 					"password",
 					"wname",
@@ -74,10 +75,12 @@ class ListCtrl {
 			if (getConf()->debug) getMessages()->addError($e->getMessage());			
 		}	
 		
-		// 4. wygeneruj widok
-		getSmarty()->assign('searchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
-		getSmarty()->assign('user',$this->records);  // lista rekordów z bazy danych
-		getSmarty()->display('UserList.tpl');
+		// 4. Stronicowanie wyników
+		$adapter = new ArrayAdapter($allRecords);
+		$pagerfanta = new Pagerfanta($adapter);
+		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+		$pagerfanta->setCurrentPage($currentPage);
+		$pagerfanta->setMaxPerPage(10);
 	}
 	
 }

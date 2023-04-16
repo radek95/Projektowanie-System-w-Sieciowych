@@ -8,4 +8,5 @@ class DietSearchForm {
 	public $diet_type;
 	public $calority;
 	public $number_of_dishes;
+	public $page;
 } 

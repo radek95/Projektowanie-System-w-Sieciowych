@@ -3,7 +3,8 @@
 namespace app\controllers;
 use app\forms\DietSearchForm;
 use PDOException;
-use JasonGrimes\Paginator;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 
 class DietListControl {
 
@@ -38,8 +39,8 @@ class DietListControl {
 		
 		// 2. Przygotowanie mapy z parametrami wyszukiwania 
 		$search_params = []; //przygotowanie pustej struktury 
-		if ( isset($this->form->recordID) && strlen($this->form->recordID) > 0) {
-			$search_params['recordID[~]'] = $this->form->recordID.'%';
+		if ( isset($this->form->dietID) && strlen($this->form->dietID) > 0) {
+			$search_params['recordID[~]'] = $this->form->dietID.'%';
 		}
 		
 		// 3. Pobranie listy rekordów z bazy danych
@@ -62,7 +63,7 @@ class DietListControl {
 		$paginator->setMaxPagesToShow(10);
 		
 		try{
-			$this->records = getDB()->select("diets", [
+			$allRecords = getDB()->select("diets", [
 					"dietID",
 					"diet_name",
 					"diet_type",
@@ -76,10 +77,12 @@ class DietListControl {
 			if (getConf()->debug) getMessages()->addError($e->getMessage());			
 		}	
 		 
-		// 4. wygeneruj widok
-		getSmarty()->assign('dietSearchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
-		getSmarty()->assign('people',$this->records);  // lista rekordów z bazy danych
-		getSmarty()->display('DietList.tpl');
+		// 4. Stronicowanie wyników
+		$adapter = new ArrayAdapter($allRecords);
+		$pagerfanta = new Pagerfanta($adapter);
+		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+		$pagerfanta->setCurrentPage($currentPage);
+		$pagerfanta->setMaxPerPage(10);
 	}
 	
 }

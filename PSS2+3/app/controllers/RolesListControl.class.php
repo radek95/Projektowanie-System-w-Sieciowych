@@ -3,7 +3,8 @@
 namespace app\controllers;
 use app\forms\RolesSearchForm;
 use PDOException;
-use JasonGrimes\Paginator;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 
 class RolesListControl {
 
@@ -59,7 +60,7 @@ class RolesListControl {
 		$paginator->setMaxPagesToShow(10);
 		
 		try{
-			$this->records = getDB()->select("roles", [
+			$allRecords = getDB()->select("roles", [
 					"rolesID",
 					"role_name",
 					"permissions",
@@ -72,10 +73,12 @@ class RolesListControl {
 			if (getConf()->debug) getMessages()->addError($e->getMessage());			
 		}	
 		
-		// 4. wygeneruj widok
-		getSmarty()->assign('RolesSearchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
-		getSmarty()->assign('roles',$this->records);  // lista rekordów z bazy danych
-		getSmarty()->display('RolesList.tpl');
+		// 4. Stronicowanie wyników
+		$adapter = new ArrayAdapter($allRecords);
+		$pagerfanta = new Pagerfanta($adapter);
+		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+		$pagerfanta->setCurrentPage($currentPage);
+		$pagerfanta->setMaxPerPage(10);
 	}
 	
 }

@@ -3,7 +3,8 @@
 namespace app\controllers;
 use app\forms\OrderSearchForm;
 use PDOException;
-use JasonGrimes\Paginator;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 
 class OrderListControl {
 
@@ -60,7 +61,7 @@ class OrderListControl {
 		$paginator->setMaxPagesToShow(10);
 		
 		try{
-			$this->records = getDB()->select("orders", [
+			$allRecords = getDB()->select("orders", [
 					"orderID",
 					"asmount",
 					"date_order",
@@ -73,10 +74,12 @@ class OrderListControl {
 			if (getConf()->debug) getMessages()->addError($e->getMessage());			
 		}	
 		 
-		// 4. wygeneruj widok
-		getSmarty()->assign('searchForm',$this->form); // dane formularza (wyszukiwania w tym wypadku)
-		getSmarty()->assign('orders',$this->records);  // lista rekordów z bazy danych
-		getSmarty()->display('OrderList.tpl');
+		// 4. Stronicowanie wyników
+		$adapter = new ArrayAdapter($allRecords);
+		$pagerfanta = new Pagerfanta($adapter);
+		$currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+		$pagerfanta->setCurrentPage($currentPage);
+		$pagerfanta->setMaxPerPage(10);
 	}
 	
 }
