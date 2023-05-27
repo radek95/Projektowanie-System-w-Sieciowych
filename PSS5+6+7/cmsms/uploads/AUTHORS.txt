@@ -1,0 +1,184 @@
+AUTHORS
+--------------------------------------
+
+- Goran ilic <uniqu3e [AT] cmsmadesimple [DOT] org>
+- Robert Campbell <calguy1000 [AT] cmsmadesimple [DOT] org>
+
+THANKS
+--------------------------------------
+
+- My family
+
+First i want to give a big "THANK YOU" to my Wife and my little Boy for 
+having so much patience with me! I love you!
+
+**************************************
+
+- DEV Team
+
+If there wouldn't be CMS Made Simple there wouldn't be this theme,
+as simple as that.
+
+**************************************
+
+- Nuno Costa
+for creating a perfect colorsheme!
+
+*************************************
+
+
+- CMSMS Community
+
+Thanks to community for supporting this software!
+
+*************************************
+
+- Yusuke Kamiyamane http://p.yusukekamiyamane.com/
+ 
+for creating great Fugue Iconset used as system icons
+
+Fugue Icons
+(C) 2011 Yusuke Kamiyamane. All rights reserved.
+These icons are licensed under a Creative Commons
+Attribution 3.0 License.
+<http://creativecommons.org/licenses/by/3.0/>
+If you can't or don't want to provide attribution, please
+purchase a royalty-free license.
+<http://p.yusukekamiyamane.com/>
+I'm unavailable for custom icon design work. But your
+suggestions are always welcome!
+<mailto:p@yusukekamiyamane.com>
+
+*************************************
+
+- Khodjaev Stanislav (Kurumizawa) http://www.icojoy.com
+for great OneBit Iconset used for Dashboard
+
+License: These icons are free to use in any kind of commercial or non-commercial project unlimited times.
+
+*************************************
+
+- Mark James http://www.famfamfam.com/lab/icons/silk/
+for Silk Icons set used in login area.
+
+Creative Commons Attribution 2.5 License.
+http://creativecommons.org/licenses/by/2.5/
+
+************************************
+
+- jQuery Team 
+for Providing amazing Framework
+
+************************************
+- Anyone else
+if i missed someone, sorry but here catch a THANK YOU! ;-)
+
+
+Developers Past and Present
+---------------------------
+- Fernando Morgado - <fjmorgado [AT] gmail [DOT] com>
+- Rolf - <rolf [AT] cmscanbesimple [DOT] org>
+- Mathieu Muths (AirLibre)
+- Chris Taylor (chrisbt)
+- Morten Poulsen <morten [AT] poulsen [DOT] org>
+
+- Robert Campbell <calguy1000 [AT] cmsmadesimple [DOT] org>
+- Tapio Löytty - stikki [AT] cmsmadesimple [AT] org
+- Goran Ilic - g [DOT] ilic [AT] i-arts [DOT] eu
+- Ronny Krijt - <ronnyk [AT] cmsmadesimple [DOT] org>
+- Ted Kulp <wishy [AT] cmsmadesimple [DOT] org>
+- Mark Reed <drcss [AT] cmsmadesimple [DOT] org>
+- Nuno Costa <nuno [AT] criacaoweb [DOT] net>
+- Alberto Benati <alberto [DOT] benati [AT] gmail [DOT] com>
+- Samuel Goldstein <cmsmadesimple [AT] fogbound [DOT] net>
+- Jeff Bosch <ajprog [AT] cmsmadesimple [DOT] org>
+- Jeremy Bass <jeremy.bass [AT] cmsmadesimple [DOT] org>
+- Tatu Wikman <tsw [AT] cmsmadesimple [DOT] org>
+- Alexander Endresen <alexander [AT] endresen [DOT] org>
+- Patricia Brun <cmsms [AT] virtuaza [DOT] net>
+- Daniel Westergren <daniel [AT] wproductions [DOT] se>
+- Greg Froese <heavy_g [AT] users.sf [DOT] net>
+- Rob Allen <rob [AT] akrabat [DOT] com>
+- Simon Brown <simon [AT] uptoeleven [DOT] ws>
+- Sorin Sbarnea <sorin [AT] intersol [DOT] ro>
+- Brett Batie <brett-cms [AT] classicwebdevelopment [DOT] com>
+- Thijs Elenbaas <thijs [AT] contemplated [DOT] net>
+- Julien Lancien <calexico [AT] cmsmadesimple [DOT] org>
+- Christian Page <christian [AT] localdesert [DOT] com>
+- Darren Landrum <consul [AT] studioconsul [DOT] net>
+
+ 
+Translators
+-----------
+The following people have contributed translations to the CMS Made Simple core since March of 2009.  
+If we have missed anybody please contact us and we will add your name for future releases.
+
+- Jacek Brzeski -- jacek [AT] numer9 [DOT] pl
+- Miloš Kroulík -- milos.kroulik [AT] email [DOT] cz
+- Panagiotis Skarvelis -- sl45sms [AT] yahoo [DOT] gr
+- Petr Jelínek -- peca.cz [AT] gmail [DOT] com
+- Jean-Claude Etiemble -- jc.etiemble [AT] free [DOT] fr
+- Daniel Vives -- daniel.vives [AT] catalonia [DOT] net
+- Christian Peretto -- christian [AT] lineapixel [DOT] com
+- Daniel Navarro -- danipelon [AT] gmail [DOT] com
+- Ronald Timmers -- webmaster [AT] id2020 [DOT] nl
+- Mirko Barbulović -- barbonister [AT] gmail [DOT] com
+- Zdeno Kuzmany -- zdeno [AT] kuzmany [DOT] biz
+- Bálint Kozman -- qzy [AT] ultramarin [DOT] hu
+- Sergey Mastykov -- sergey.mastykov [AT] gmail [DOT] com
+- Cornel Dan -- dan_4jc [AT] yahoo [DOT] com
+- Paco Orozco -- pakusland [AT] gmail [DOT] com
+- Patricia Brun Torre -- cmsms [AT] virtuaza [DOT] org
+- Takayuki Kobayashi -- koba [AT] zuifu [DOT] com
+- clementina immirzi -- clementinai [AT] yahoo [DOT] com
+- Ronny Krijt -- r.krijt [AT] gmail [DOT] com
+- Ilya  -- ilia3d [AT] web [DOT] de
+- Birger Eriksson -- birger [AT] pckart [DOT] se
+- Piotras Cimmperman -- vilkis [AT] gmail [DOT] com
+- Vedat Karaduman -- vedatkaraduman [AT] gmail [DOT] com
+- Sofia Hauschildt -- sofia [AT] hauschildt [DOT] net
+- Franck Lafay -- franck.lafay [AT] orange [DOT] fr
+- Morten Poulsen -- morten [AT] poulsen [DOT] org
+- Gour D. -- gour [AT] atmarama [DOT] net
+- Jonas Rydén -- cold.man [AT] live [DOT] se
+- Sinus Iks -- jaka99 [AT] gmail [DOT] com
+- Gion-Andri Cantieni -- gion-andri [AT] gmx [DOT] ch
+- Alberto Benati -- cms [AT] xme [DOT] it
+- Fernando Morgado -- fjmorgado {AT] gmail {DOT] com
+- Nuno Costa -- nuno.mfcosta [AT] sapo [DOT] pt
+- Eduardo Martinez -- edmartgt [AT] yahoo [DOT] com
+- Square -- benjamin_cantele [AT] yahoo [DOT] fr
+- Andreas Just -- wilfried44g [AT] googlemail [DOT] com
+- René Helminsen -- cmsms [AT] helminsen [DOT] no
+- Stephan -- vipstephan [AT] gmail [DOT] com
+- Kaupo Vana -- kaupov3 [AT] hot [DOT] ee
+- Christoffer L -- christoffer.la [AT] hotmail [DOT] com
+- Christophe Lherieau -- skimpax [AT] gmail [DOT] com
+- Joost de Bruijn -- joostdebruijn [AT] planet [DOT] nl
+- Rolf -- rolf [AT] cmsmadesimple [DOT] org
+- Jos -- josvd [AT] live [DOT] nl
+- Anton Evseichev -- jn0izzze [AT] gmail [DOT] com
+- Oskar Rough -- oskar [AT] lyf [DOT] dk
+- RichardD -- richard [DOT] desiatnik [AT] ume [DOT] se
+- Tapio Löytty -- tapsa [AT] blackmilk [DOT] fi
+- yulik -- 4x6hp [AT] 4x6hp [DOT] net
+- Cosmin Hutanu -- urecheatu007 [AT] gmail [DOT] com
+- Omid Ahn -- omidahn [AT] gmail [DOT] com
+- Heikki Ylipaavalniemi -- heikki [DOT] y [AT] empiria [DOT] org
+- Zelimir Mikulic -- zelimir [DOT] mikulic [AT] vus [DOT] hr
+- Andrew Minton -- moonoo [DOT] am [AT] gmail [DOT] com
+- Jonathan Schmid -- hi [AT] jonathanschmid [DOT] de
+- Lukasz Bigoszewski -- bigoszewski [AT] excel [DOT] pl
+- Goran Ilic -- g [DOT] ilic [AT] i-arts [DOT] eu
+- Benoit Vermont -- redwarp [AT] gmail [DOT] com
+- Aire Libre (Mathieu M [DOT] ) -- contact [AT] airelibre [DOT] fr
+- Farhad Pezeshki -- farhadrm [AT] hotmail [DOT] com
+- Alex -- html5sf [AT] gmail [DOT] com
+
+Past Translators:
+Translators are automatic removed from list if not active two years before release of version.  
+
+
+Contributors
+------------
+Leendert Meyer: Horizontal menu patch and svn cleanup scripts
